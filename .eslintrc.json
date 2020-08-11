@@ -37,6 +37,7 @@
       "camelcase": "off",
       "react/prop-types": "off",
       "react/jsx-props-no-spreading": "off",
+      "no-unused-expressions": "off",
       "react/style-prop-object": "off",
       "import/extensions": [
         "error",
