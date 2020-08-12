@@ -12,6 +12,8 @@ import {
   useFonts,
 } from '@expo-google-fonts/roboto-slab';
 
+import AppProvider from './src/hooks';
+
 import Routes from './src/routes';
 
 const App: React.FC = () => {
@@ -25,10 +27,12 @@ const App: React.FC = () => {
   }
   return (
     <NavigationContainer>
-      <View style={{ flex: 1, backgroundColor: '#312e38' }}>
-        <Routes />
-        <StatusBar style="light" />
-      </View>
+      <StatusBar style="light" />
+      <AppProvider>
+        <View style={{ flex: 1, backgroundColor: '#312e38' }}>
+          <Routes />
+        </View>
+      </AppProvider>
     </NavigationContainer>
   );
 };
